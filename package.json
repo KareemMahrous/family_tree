@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
+    "seed:family-members": "node src/scripts/seedFamilyMembers.js",
     "test": "echo \"No tests configured\""
   },
   "keywords": [],

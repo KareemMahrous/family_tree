@@ -96,7 +96,7 @@ If the header starts with `ar`, responses are returned in Arabic. Otherwise, the
 
 ```json
 {
-  "name": "Mahrous",
+  "name": "Name",
   "phone": "01012345678",
   "password": "123456"
 }
