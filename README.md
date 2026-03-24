@@ -56,29 +56,6 @@ On startup, the app creates these tables automatically:
 - `users`
 - `family_members`
 
-## Sync Family Members From Remote API
-
-To replace all local family members with records from the remote paginated API, run:
-
-```bash
-npm run sync:family-members
-```
-
-By default, the sync pulls from:
-
-```bash
-https://alqawasim.ae/api/family-members/search
-```
-
-Optional environment variables:
-
-```bash
-REMOTE_FAMILY_MEMBERS_API_URL=https://alqawasim.ae/api/family-members/search
-REMOTE_FAMILY_MEMBERS_PAGE_SIZE=50
-```
-
-The sync script fetches all pages first, then clears `family_members`, and finally inserts the new member list in a single database transaction.
-
 Family member records use the numeric `id` coming from the remote source.
 
 `family_members` stores only these fields:
@@ -97,12 +74,6 @@ Family member records use the numeric `id` coming from the remote source.
 - `wifeName`
 - `photoUrl`
 
-## Docker
-
-Docker is optional.
-
-The project may include a `docker-compose.yml` file only as a convenience for people who want to run PostgreSQL with Docker. You do not need Docker if you already have PostgreSQL installed locally.
-
 ## Why PostgreSQL
 
 PostgreSQL fits this app well because it handles large user datasets, strong indexing, and recursive family-tree style queries better than a JSON file.
@@ -118,7 +89,7 @@ Examples:
 ```bash
 Accept-Language: en
 Accept-Language: ar
-Accept-Language: ar-EG
+Accept-Language: ar-AE
 ```
 
 If the header starts with `ar`, responses are returned in Arabic. Otherwise, the API uses English.
@@ -168,6 +139,7 @@ Query params:
 
 - `pageNumber`
 - `pageSize`
+- `search`
 
 Example:
 
