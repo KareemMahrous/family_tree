@@ -22,7 +22,7 @@ function validatePhone(phone) {
   }
 
   const normalizedPhone = phone.trim();
-  return /^01[0125][0-9]{8}$/.test(normalizedPhone);
+  return normalizedPhone;
 }
 
 async function register({ name, phone, password, isFamilyMember = false }, t) {

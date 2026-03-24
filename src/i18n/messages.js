@@ -22,6 +22,7 @@ const messages = {
     familyMembersFetchedSuccessfully: "family members fetched successfully",
     familyMemberFetchedSuccessfully: "family member fetched successfully",
     familyMemberNotFound: "family member not found",
+    commonAncestorFetchedSuccessfully: "common ancestor fetched successfully",
   },
   ar: {
     appRunning: "واجهة برمجة تطبيقات قواسم تعمل الآن",
@@ -46,6 +47,7 @@ const messages = {
     familyMembersFetchedSuccessfully: "تم جلب أفراد العائلة بنجاح",
     familyMemberFetchedSuccessfully: "تم جلب فرد العائلة بنجاح",
     familyMemberNotFound: "فرد العائلة غير موجود",
+    commonAncestorFetchedSuccessfully: "تم جلب الجد المشترك بنجاح",
   },
 };
 

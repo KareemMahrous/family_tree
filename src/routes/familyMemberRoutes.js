@@ -18,6 +18,23 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+router.get("/search-between/:id1/:id2", async (req, res, next) => {
+  try {
+    const result = await familyMemberService.searchBetweenMembers(
+      req.params.id1,
+      req.params.id2,
+      req.t,
+    );
+    sendSuccess(res, {
+      status: 200,
+      message: req.t("commonAncestorFetchedSuccessfully"),
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.get("/:id", async (req, res, next) => {
   try {
     const member = await familyMemberService.getFamilyMemberById(req.params.id, req.t);
