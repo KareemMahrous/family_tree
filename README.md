@@ -24,7 +24,7 @@ npm install
 ```bash
 PORT=3000
 JWT_SECRET=super-secret-jwt-key
-DATABASE_URL=postgresql://mahrous@localhost:5432/qawasem
+DATABASE_URL=postgresql://user@localhost:5432/qawasem
 ```
 
 Create a `.env` file in the project root and add the values above.
